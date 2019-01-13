@@ -1,0 +1,16 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dicer2"
+             xmlns:Data="clr-namespace:Dicer2.Data" x:Class="Dicer2.DiceRow"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="250">
+	<Grid Loaded="Grid_Loaded">
+		<Grid.DataContext>
+			<Data:DiceDataSource/>
+		</Grid.DataContext>
+		<Label Content="{Binding Groups/Items/Name, Mode=OneWay}" Width="100" Height="26" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+	</Grid>
+</UserControl>

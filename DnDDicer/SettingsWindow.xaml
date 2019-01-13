@@ -1,0 +1,23 @@
+﻿<Window x:Class="DnDDicer.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:DnDDicer"
+        mc:Ignorable="d"
+        Title="D&amp;D Dicer Settings" Height="300" Width="300" Closing="Window_Closing">
+	<Grid Loaded="Grid_Loaded">
+		<ComboBox x:Name="profileBox" HorizontalAlignment="Left" Margin="85,45,0,0" VerticalAlignment="Top" Width="144" IsEditable="False" SelectionChanged="profileBox_SelectionChanged"/>
+		<CheckBox x:Name="alwaysResetBox" Content="Always Reset Rolls" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="125"/>
+		<CheckBox x:Name="showEmpBox" Content="Show Empowered" HorizontalAlignment="Right" Margin="0,72,10,0" VerticalAlignment="Top" Width="125"/>
+		<Label x:Name="mrLabel" Content="Even Row Color" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="272" Height="30"/>
+		<Label x:Name="orLabel" Content="Odd Row Color" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="272" Height="30"/>
+		<Label x:Name="label" Content="Profiles" HorizontalAlignment="Left" Margin="16,27,0,0" VerticalAlignment="Top" Width="64"/>
+		<Button x:Name="addProfBtn" Content="Add" HorizontalAlignment="Left" Margin="85,12,0,0" VerticalAlignment="Top" Width="53" Height="23" Click="addProfBtn_Click"/>
+		<Button x:Name="delProfBtn" Content="Del" HorizontalAlignment="Left" Margin="176,12,0,0" VerticalAlignment="Top" Width="53" Height="23" Click="delProfBtn_Click" />
+		<xctk:ColorPicker x:Name="MainRowColor" SelectedColorChanged="MainRowColor_SelectedColorChanged" Margin="136,101,10,139"/>
+		<xctk:ColorPicker x:Name="OffRowColor" SelectedColorChanged="OffRowColor_SelectedColorChanged" Margin="136,144,10,96"/>
+
+	</Grid>
+</Window>
