@@ -5,26 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDDicer"
         mc:Ignorable="d"
-        Title="Dice Roller" Height="500" MinHeight="500" Width="320" MinWidth="300" Closing="Window_Closing" Loaded="Window_Loaded" ScrollViewer.CanContentScroll="True" MaxWidth="300">
-    <Grid Name="MainGrid" VerticalAlignment="Top" MinWidth="320" MinHeight="450" Margin="0,0,0,0" Width="320">
+        Title="Dice Roller" Height="500" MinHeight="500" Width="310" MinWidth="310" Closing="Window_Closing" Loaded="Window_Loaded" ScrollViewer.CanContentScroll="True" MaxWidth="300">
+    <Grid Name="MainGrid" VerticalAlignment="Top" MinWidth="300" MinHeight="450" Margin="0,0,0,0" Width="310">
         <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Center" Height="5" Margin="88,44,0,-44" VerticalAlignment="Top" Width="5" BorderThickness="0,1" ShowsPreview="True"/>
-        <Grid HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="290" RenderTransformOrigin="0.616,0.558">
+		<Grid HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.616,0.558">
 			<Button x:Name="settingsBtn" Content="Settings" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="65" Click="settingsBtn_Click" />
 			<Button x:Name="addNew" Content="Add New Dice" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="104" Click="addNew_Click"/>
 			<Button x:Name="resetRolls" Content="Reset Rolls" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="65" Click="resetRolls_Click"/>
 		</Grid>
-		<ScrollViewer Name="DiceScroll" Width="300" Height="Auto" MinHeight="300" Margin="0,40,0,0" VerticalAlignment="Top">
-			<ListView HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="300" MinWidth="290" MaxWidth="290" Name="DiceGrid" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible">
-				<ListView.DataContext>
-					<local:Dice />
-				</ListView.DataContext>
-				
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<local:DiceRow DataContext="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListView},Path=DataContext}" />
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</ListView>
-        </ScrollViewer>
-    </Grid>
+		<ListView Padding="-1,0,0,0" Margin="0,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="425" Height="Auto" Width="300" MinWidth="300" Name="DiceGrid" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible">
+		</ListView>
+	</Grid>
 </Window>

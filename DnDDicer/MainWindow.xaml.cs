@@ -100,7 +100,8 @@ namespace DnDDicer
 					diceArray = DiceData,
 					Name = "DiceRow" + i,
 					thisDice = fDie,
-					Margin = new Thickness(0, (DiceGrid.Items.Count * 60) + 5, 0, 0),
+					Margin = new Thickness(0, 0, 0, 0),
+					Padding = new Thickness(0, 0, 0, 0),
 					VerticalAlignment = VerticalAlignment.Top,
 					BorderThickness = new Thickness(0, 1, 0, 1),
 					BorderBrush = Brushes.Black
